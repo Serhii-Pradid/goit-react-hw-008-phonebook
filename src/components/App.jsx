@@ -23,7 +23,7 @@ export const App = () => {
 
   <section>
 
-    <h1>Phonebook</h1>
+      <h1>Phonebook</h1>
     <Form />
     <h1> Contacts </h1>
     <Filter />
@@ -33,3 +33,11 @@ export const App = () => {
 );
 };
 
+/*<section>
+<h1>Phonebook</h1>
+    <Form />
+    <h1> Contacts </h1>
+    <Filter />
+    {isLoading && !error && <b>Request in progress...</b>}
+    <ContactList />
+  </section>*/
