@@ -1,13 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
+
+import { Nav, StyleNavLink} from './Navigations.styled';
 
 const Navigation = () => {
   
   return (
-    <nav>
-      <NavLink to="/"> Home  </NavLink>
-      <NavLink to="/contacts"> Contacts </NavLink>
-    </nav>
+    <Nav>
+      <StyleNavLink to="/"> Home  </StyleNavLink>
+      <StyleNavLink to="/contacts"> Contacts </StyleNavLink>
+    </Nav>
   );
 };
 

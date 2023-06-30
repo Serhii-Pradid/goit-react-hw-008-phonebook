@@ -1,10 +1,12 @@
 import { useState } from 'react';
-//import authOperations from '../redux/auth/auth-operations';
-//import { useDispatch } from 'react-redux';
+import authOperations from 'redux/auth/auth-operations';
+import { useDispatch } from 'react-redux';
+
+import './Login.module.css'
 
 
 const Login = () => {
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
@@ -24,14 +26,14 @@ const Login = () => {
   
     const handleSubmit = event => {
       event.preventDefault();
-      //dispatch(authOperations.logIn({ email, password }));
+      dispatch(authOperations.logIn({ email, password }));
   
       setEmail('');
       setPassword('');
     };
   
     return (
-      <div>
+      <section>
         <h2 >Log in form</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -50,7 +52,7 @@ const Login = () => {
           />
           <button type="submit "> Log in </button>
         </form>
-      </div>
+      </section>
     );
   };
   

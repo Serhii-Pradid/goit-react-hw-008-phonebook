@@ -1,9 +1,11 @@
 import { useState } from 'react';
-//import authOperations from '../redux/auth/auth-operations';
-//import { useDispatch } from 'react-redux';
+import authOperations from 'redux/auth/auth-operations';
+import { useDispatch } from 'react-redux';
+
+import './Register.module.css'
 
 const Register = () => {
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -28,7 +30,7 @@ const Register = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    //dispatch(authOperations.register({ name, email, password }));
+    dispatch(authOperations.register({ name, email, password }));
 
     setName('');
     setEmail('');
@@ -36,7 +38,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <section>
       <h2>Registration</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -64,7 +66,7 @@ const Register = () => {
           Registration
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
