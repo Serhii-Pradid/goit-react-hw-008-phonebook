@@ -26,7 +26,7 @@ export const ContactList = () => {
 
     return (
       <div>
-     {isLoggedIn & ( <ul>
+     {isLoggedIn && ( <ul>
         {visibleContacts.map(({id, name, number}) => (
                 <li key={id} >
                     <p> {name} : {number} </p>
