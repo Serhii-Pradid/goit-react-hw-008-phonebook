@@ -1,11 +1,14 @@
 import css from './ContactList.module.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from "redux/operations";
-import { selectContacts, selectStatusFilter } from "redux/selectors"
+import { deleteContact } from "redux/contacts/operations";
+import { selectContacts, selectStatusFilter } from "redux/contacts/selectors"
+import authSelectors from 'redux/auth/auth-selectors';
 
 
 export const ContactList = () => {
-    const dispatch = useDispatch();
+
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  const dispatch = useDispatch();
 
     const contacts = useSelector(selectContacts);
     const filter = useSelector(selectStatusFilter);
@@ -22,8 +25,8 @@ export const ContactList = () => {
 
 
     return (
-        
-    <ul>
+      <div>
+     {isLoggedIn & ( <ul>
         {visibleContacts.map(({id, name, number}) => (
                 <li key={id} >
                     <p> {name} : {number} </p>
@@ -31,6 +34,9 @@ export const ContactList = () => {
                             onClick={ () => (handleDeleteContact(id)) }> Delete </button>
                 </li>
             ))}
-    </ul>
+    </ul>)}   
+    </div>
     );
 };
+
+
