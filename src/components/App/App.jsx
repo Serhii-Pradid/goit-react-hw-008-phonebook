@@ -1,15 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Layout from "../Layout/Layout";
-//import HomeView from "views/Home/Home";
-//import Login from "views/Login/Login";
-//import Register from "views/Register/Register";
-//import Contacts from 'views/Contacts/Contacts'
-//import NotFound from "views/NotFound/NotFound";
 import authOperations from "redux/auth/auth-operations";
 import PrivateRouts from "components/Routs/PrivateRouts";
 import PublicRouts from "components/Routs/PublicRouts";
+import authSelectors from "redux/auth/auth-selectors";
 
 const HomeView = lazy(() => import('views/Home/Home'));
 const Register = lazy(() => import('views/Register/Register'));
@@ -19,12 +15,14 @@ const NotFound = lazy(() => import('views/NotFound/NotFound'));
 
 export const App = () => {
    const dispatch = useDispatch();
+   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
 
    useEffect(() =>{
       dispatch(authOperations.fetchCurrentUser());
       }, [dispatch])
       
    return (
+      !isFetchingCurrentUser && (
     <Routes>
         <Route path='/' element={ <Layout/> }>
 
@@ -55,6 +53,7 @@ export const App = () => {
         <Route path="*" element={ <NotFound/>} />
       </Route>
       </Routes>
+      )
    );
   };
   
