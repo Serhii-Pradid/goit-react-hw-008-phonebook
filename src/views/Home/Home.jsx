@@ -1,8 +1,8 @@
 import React from 'react';
-//import s from '../Styles.module.css';
+import css from './Home.module.css';
 
 const HomeView = () => (
-  <div >
+  <div className={css.title} >
     <h1> Welcome to the phonebook </h1>
   </div>
 );
