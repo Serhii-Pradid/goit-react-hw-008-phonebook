@@ -3,7 +3,7 @@ import authOperations from 'redux/auth/auth-operations';
 import authSelectors from 'redux/auth/auth-selectors';
 import { FcReading } from "react-icons/fc"
 
-import { Container,ButtonLogOut } from './UserMenu.styled';
+import { Container, ButtonLogOut, LoginAvatar } from './UserMenu.styled';
 
 const UserMenu = () => {
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const UserMenu = () => {
     return (
         <Container >
           {/*<img src={avatar} alt='' width='32'/>*/}
-        <p> <FcReading /></p>
+        <LoginAvatar> <FcReading size={32} /> </LoginAvatar>
         <p>Welcome, </p>
         <p>{name} !</p>
      

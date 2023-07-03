@@ -2,7 +2,7 @@ import { useState } from 'react';
 import authOperations from 'redux/auth/auth-operations';
 import { useDispatch } from 'react-redux';
 
-import './Login.module.css'
+import './Login.module.css';
 
 
 const Login = () => {

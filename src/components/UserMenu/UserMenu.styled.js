@@ -30,3 +30,10 @@ export const ButtonLogOut = styled.button`
      background-color: rgb(211, 78, 16);
 }
 }`
+
+export const LoginAvatar = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`
