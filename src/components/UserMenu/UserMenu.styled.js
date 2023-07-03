@@ -1,15 +1,32 @@
 import styled from 'styled-components';
-//import { NavLink } from 'react-router-dom';
 
-/*export const Container = styled.div`
+export const Container = styled.div`
 display: flex;
-flex-direction: column;
+gap: 10px;
 align-content: center;
 align-items: center;
-}`;*/
+justify-content: center;
+}`;
 
-export const Div = styled.div`
-  top: 0;
-  left: 0;
+export const ButtonLogOut = styled.button`
   display: flex;
-  `
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  margin-right: 5px;
+  margin-left: auto;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+
+  background-color: rgb(143, 139, 139);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+     background-color: rgb(211, 78, 16);
+}
+}`

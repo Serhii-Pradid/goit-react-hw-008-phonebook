@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-/*export const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-content: center;
-align-items: center;
-}`;*/
-
 export const Nav = styled.nav`
   top: 0;
   left: 0;
@@ -18,11 +11,8 @@ export const Nav = styled.nav`
   padding-left: 40px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
-  background-color: #6D6D54;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-`;
+  color: fffff66;
+  `;
 
 export const StyleNavLink = styled(NavLink)`
   font-weight: 500;

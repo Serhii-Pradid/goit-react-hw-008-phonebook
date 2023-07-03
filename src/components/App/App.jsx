@@ -28,9 +28,9 @@ export const App = () => {
 
         <Route index element={ 
         <PublicRouts>
-          <HomeView />
-       </PublicRouts>
-      }/>
+         <HomeView /> 
+         </PublicRouts>
+         }/>
 
         <Route path='/register' element={
         <PublicRouts restricted>

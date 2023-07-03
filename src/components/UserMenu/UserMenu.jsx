@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import authOperations from 'redux/auth/auth-operations';
 import authSelectors from 'redux/auth/auth-selectors';
+import { FcReading } from "react-icons/fc"
 
-import { Div } from './UserMenu.styled';
-//import defaultAvatar from '.default.png'
+import { Container,ButtonLogOut } from './UserMenu.styled';
 
 const UserMenu = () => {
     const dispatch = useDispatch();
@@ -12,20 +12,23 @@ const UserMenu = () => {
     //const avatar = defaultAvatar;
   
     return (
-        <Div >
+        <Container >
           {/*<img src={avatar} alt='' width='32'/>*/}
+        <p> <FcReading /></p>
         <p>Welcome, </p>
-        <p>{name}</p>
-        <p>😃</p>
-        <button
+        <p>{name} !</p>
+     
+        <ButtonLogOut
           type="submit"
           onClick={() => dispatch(authOperations.logOut())}
         >
           Log out
-        </button>
-      </Div>
+        </ButtonLogOut>
+      </Container>
     );
 
   };
   
   export default UserMenu;
+
+  

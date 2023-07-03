@@ -6,8 +6,6 @@ import authSelectors from "redux/auth/auth-selectors";
 
 import { Nav } from './AppBar.styled';
 
-
-
 const AppBar = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn)
   

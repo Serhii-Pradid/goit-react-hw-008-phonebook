@@ -63,9 +63,7 @@ const handleSubmit = event => {
   />
     </label>
 
-     <label > Number
-
-   <input
+     <label > Number   <input
   type="tel"
   placeholder="xxx-xx-xx"
   name="number"
