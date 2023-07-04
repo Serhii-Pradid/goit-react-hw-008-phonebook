@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[628],{628:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});n(791);var a="NotFound_title__uO8Xc",c="NotFound_image__ZAWbc",s=n(329),o=function(){return(0,s.jsxs)("div",{children:[(0,s.jsx)("img",{className:c,src:"/src/components/Images/vecteezy_404-landing-page_6549647.jpg",alt:""}),(0,s.jsx)("h2",{className:a,children:" The page is not found "})]})}}}]);
+//# sourceMappingURL=628.430f9b7a.chunk.js.map
