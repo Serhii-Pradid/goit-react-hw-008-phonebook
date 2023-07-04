@@ -49,8 +49,7 @@ export const App = () => {
                <Contacts/>
             </PrivateRouts> 
           }/>
-
-        <Route path="*" element={ <NotFound/>} />
+         <Route path="*" element={ <NotFound/> } />
       </Route>
       </Routes>
       )
