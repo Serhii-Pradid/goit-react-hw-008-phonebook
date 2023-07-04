@@ -49,9 +49,9 @@ export const App = () => {
                <Contacts/>
             </PrivateRouts> 
           }/>
-         <Route path="*" element={ <NotFound/> } />
-      </Route>
-      </Routes>
+          <Route path="*" element={ <NotFound/> } />
+        </Route>
+          </Routes>
       )
    );
   };
